@@ -4,6 +4,6 @@ public class Restaurant extends Wagon {
 
     @Override
     public String print() {
-        return "|hThT|";
+        return Formats.Restaurant;
     }
 }

@@ -16,7 +16,7 @@ public class WagonFactory {
             return new Tail();
 
         } else if (wagonCode == WagonCode.C) {
-            return Cargo.emptyCargo();
+            return new Cargo();
         }
 
         throw new IllegalArgumentException("Invalid wagonCode: " + wagonCode);

@@ -4,6 +4,6 @@ public class Passenger extends Wagon {
 
     @Override
     public String print() {
-        return "|OOOO|";
+        return Formats.Passenger;
     }
 }

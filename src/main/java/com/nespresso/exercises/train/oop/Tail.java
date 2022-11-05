@@ -4,6 +4,6 @@ public class Tail extends Wagon{
 
     @Override
     public String print() {
-        return "HHHH>";
+        return Formats.Tail;
     }
 }

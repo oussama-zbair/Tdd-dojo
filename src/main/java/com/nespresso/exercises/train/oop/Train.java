@@ -2,7 +2,6 @@ package com.nespresso.exercises.train.oop;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class Train {
@@ -34,12 +33,17 @@ public class Train {
 
 
     public boolean fill() {
-        Optional<Cargo> cargo = wagons.stream()
-                .filter(w -> w instanceof Cargo)
-                .map(w -> ((Cargo) w))
-                .filter(Cargo::isEmpty)
-                .findFirst();
+        for (int i = 0; i < wagons.size(); i++) {
+            Wagon w = wagons.get(i);
+            if (empty(w)) {
+                wagons.set(i, ((Cargo) w).fill());
+                return true;
+            }
+        }
+        return false;
+    }
 
-        return cargo.isPresent() ? cargo.get().fill() : false;
+    private static boolean empty(Wagon wagon) {
+        return wagon instanceof Cargo && ((Cargo) wagon).empty();
     }
 }

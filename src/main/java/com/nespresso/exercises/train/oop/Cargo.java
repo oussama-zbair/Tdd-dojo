@@ -1,36 +1,28 @@
 package com.nespresso.exercises.train.oop;
 
 public class Cargo extends Wagon {
-    private static final String EMPTY = "|____|";
-    private static final String FULL = "|^^^^|";
 
-    private String cargo;
 
-    public Cargo(String cargo) {
-        this.cargo = cargo;
+    private final CargoState state;
+
+    public Cargo() {
+        this(CargoState.EMPTY);
+    }
+
+    public Cargo(CargoState state) {
+        this.state = state;
     }
 
     @Override
     public String print() {
-        return cargo;
+        return this.state.print();
     }
 
-    public static Cargo emptyCargo() {
-        return new Cargo(EMPTY);
+    public Cargo fill() {
+        return new Cargo(CargoState.FULL);
     }
 
-    public boolean fill() {
-        if (isEmpty()) {
-            this.cargo = FULL;
-            return true;
-        }
-
-        return false;
-
+    public boolean empty() {
+        return this.state == CargoState.EMPTY;
     }
-
-    public boolean isEmpty() {
-        return this.cargo == EMPTY;
-    }
-
 }
