@@ -3,12 +3,12 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.nespresso.sofa.recruitment</groupId>
+    <groupId>com.tdd.training.restaurant</groupId>
     <artifactId>exo-restaurant</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>labyrinth</name>
+    <name>oussama-zbair</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
