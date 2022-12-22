@@ -53,6 +53,4 @@ This is just a simple example, but it illustrates the basic idea behind TDD with
 
 ------------
 
-To Advaced my tdd practice, I made the solution of two given exercice in a java Software Engineer intreview : the first exercice is about a train , second about a restaurant. 
- 
-
+With the goal of advancing my TDD practice, I created solutions for two exercises frequently given in Java software engineering interviews, featuring a train and a restaurant scenario. The source code can be accessed for review
